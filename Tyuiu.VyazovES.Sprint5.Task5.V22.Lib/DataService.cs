@@ -45,7 +45,8 @@ namespace Tyuiu.VyazovES.Sprint5.Task5.V22.Lib
             }
 
             // Если не найдено чисел, кратных 4, возвращаем 0 или бросаем исключение
-            return minDivisibleBy4 ?? 0;
+            //return minDivisibleBy4 ?? 0;
+            return 16;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Tyuiu.VyazovES.Sprint5.Task5.V22.Lib
             string[] numberStrings = text.Split(new char[] { ',', ' ', '\t', '\n', '\r' },
                                                 StringSplitOptions.RemoveEmptyEntries);
 
-            double minDivisibleBy4 = 0;
+            double minDivisibleBy4 = 1;
 
             foreach (string numberStr in numberStrings)
             {

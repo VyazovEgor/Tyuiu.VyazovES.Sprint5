@@ -11,7 +11,7 @@ namespace Tyuiu.VyazovES.Sprint5.Task5.V22.Lib
             string text = File.ReadAllText(filePath);
 
             // Разделение на числа (предполагаем разделитель - запятая)
-            string[] numberStrings = text.Split(new char[] { ',', ' ', '\t', '\n', '\r' },
+            string[] numberStrings = text.Split(new char[] {' ', '\t', '\n', '\r' },
                                                 StringSplitOptions.RemoveEmptyEntries);
 
             double? minDivisibleBy4 = null; // Используем nullable double

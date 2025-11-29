@@ -20,7 +20,7 @@ namespace Tyuiu.VyazovES.Sprint5.Task2.V12.Lib
             string fileName = "OutPutFileTask2.csv";
             string tempPath = Path.GetTempPath();
             string fullPath = Path.Combine(tempPath, fileName);
-            SaveArrayToCsv(array, fullPath);
+             SaveArrayToCsv(array, fullPath);
             return fullPath;
         }
 
@@ -34,7 +34,7 @@ namespace Tyuiu.VyazovES.Sprint5.Task2.V12.Lib
                     for (int j = 0; j < 3; j++)
                     {
                         line += array[i, j];
-                        if (j < 2) line += "\n";
+                        if (j < 2) line += ";";
                     }
                     writer.WriteLine(line);
                 }

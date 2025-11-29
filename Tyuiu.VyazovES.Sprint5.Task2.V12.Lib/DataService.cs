@@ -16,11 +16,29 @@ namespace Tyuiu.VyazovES.Sprint5.Task2.V12.Lib
                         array[i, j] = 0;
                 }
             }
-
+           
             string fileName = "OutPutFileTask2.csv";
             string tempPath = Path.GetTempPath();
             string fullPath = Path.Combine(tempPath, fileName);
+            SaveArrayToCsv(array, fullPath);
             return fullPath;
+        }
+
+        static void SaveArrayToCsv(int[,] array, string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    string line = "";
+                    for (int j = 0; j < 3; j++)
+                    {
+                        line += array[i, j];
+                        if (j < 2) line += "\n";
+                    }
+                    writer.WriteLine(line);
+                }
+            }
         }
     }
 }

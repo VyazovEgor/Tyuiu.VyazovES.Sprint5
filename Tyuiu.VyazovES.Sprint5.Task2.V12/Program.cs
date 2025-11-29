@@ -26,8 +26,8 @@ for (int i = 0; i <= a; i++)
 }
 
 
-Console.WriteLine("Файл: " + s);
-Console.WriteLine("Создан!");
+//Console.WriteLine("Файл: " + s);
+//Console.WriteLine("Создан!");
 
 
 Console.ReadKey();

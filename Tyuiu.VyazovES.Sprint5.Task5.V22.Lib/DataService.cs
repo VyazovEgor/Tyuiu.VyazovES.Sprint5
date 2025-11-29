@@ -14,7 +14,7 @@ namespace Tyuiu.VyazovES.Sprint5.Task5.V22.Lib
             string[] numberStrings = text.Split(new char[] { ',', ' ', '\t', '\n', '\r' },
                                                 StringSplitOptions.RemoveEmptyEntries);
 
-            double minDivisibleBy4 = 1;
+            double? minDivisibleBy4 = null; // Используем nullable double
 
             foreach (string numberStr in numberStrings)
             {
@@ -43,8 +43,9 @@ namespace Tyuiu.VyazovES.Sprint5.Task5.V22.Lib
                     }
                 }
             }
-            return minDivisibleBy4;
 
+            // Если не найдено чисел, кратных 4, возвращаем 0 или бросаем исключение
+            return minDivisibleBy4 ?? 0;
         }
     }
 }

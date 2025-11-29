@@ -8,10 +8,9 @@ namespace Tyuiu.VyazovES.Sprint5.Task7.V4.Lib
     {
         public string LoadDataAndSave(string filePath)
         {
-
-
-            string outputFilePath = @"С:\DataSprint5\OutPutDataFileTask7V4.txt";
-
+            string tempPath = Path.GetTempPath();
+            string outputFileName = "OutPutDataFileTask7V4.txt";
+            string outputFilePath = Path.Combine(tempPath, outputFileName);
 
             string content = File.ReadAllText(filePath);
             StringBuilder result = new StringBuilder();
@@ -30,8 +29,8 @@ namespace Tyuiu.VyazovES.Sprint5.Task7.V4.Lib
 
             File.WriteAllText(outputFilePath, result.ToString());
             return outputFilePath;
+
         }
-            
     }
 }
 
